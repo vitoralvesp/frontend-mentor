@@ -83,11 +83,14 @@ body {
 }
 
 .faq-content .questions dt.active {
-  color: var(--soft-red);
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 700;
 }
 
 .faq-content .questions dt.active::after {
   content: url("../faq-accordion-card-main/images/icon-arrow-down.svg");
+  width: 12px;
+  height: 12px;
   transform: rotate(180deg);
 }
 
