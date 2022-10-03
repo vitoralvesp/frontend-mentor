@@ -7,12 +7,63 @@
   --dark-grayish-red: hsl(0, 6%, 24%);
 
   /* gradients */
-  --principal-gradient: Linear, 135deg, from hsl(0, 0%, 100%),
-    to hsl(0, 100%, 98%);
-  --secondary-gradient: Linear, 135deg, from hsl(0, 80%, 86%),
-    to hsl(0, 74%, 74%);
+  --principal-gradient-1: hsl(0, 0%, 100%);
+  --principal-gradient-2: hsl(0, 100%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
 }
 
 body {
   font-family: "Josefin Sans", sans-serif;
+  background-color: black;
+  background-image: linear-gradient(
+    var(--principal-gradient-1),
+    var(--principal-gradient-2)
+  );
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.content-container {
+  margin: 60px 90px 90px 60px;
+}
+
+header,
+.content {
+  grid-column: 1;
+}
+
+.content {
+    grid-row: 2 / 3;
 }
